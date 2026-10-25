@@ -121,6 +121,8 @@ class GetOptions {
     /**
      * Analise les options courtes
      * 
+     * @param string $subject
+     * @param array &$arguments
      * @return void
      */
     protected static function analyzeShortOptions(string $subject, array &$arguments): void
@@ -178,6 +180,9 @@ class GetOptions {
     /**
      * Analise les options longues
      * 
+     * @param string $subject
+     * @param array $matches
+     * @param array &$arguments
      * @return void
      */
     protected static function analyzeLongOptions(string $subject, array $matches, array &$arguments): void
