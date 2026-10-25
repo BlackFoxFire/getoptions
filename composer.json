@@ -1,0 +1,23 @@
+{
+    "name": "blackfox/getoptions",
+    "description": "GetOptions permet de gérer les options passées en ligne de commande un script PHP",
+    "type": "library",
+    "require": {
+        "php": "^8.5"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^8.1"
+    },
+    "license": "LGPL-2.1-or-later",
+    "autoload": {
+        "psr-4": {
+            "Blackfox\\Getoptions\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Christophe Dufour",
+            "email": "blackfox@proximus.be"
+        }
+    ]
+}
