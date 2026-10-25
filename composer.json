@@ -11,7 +11,7 @@
     "license": "LGPL-2.1-or-later",
     "autoload": {
         "psr-4": {
-            "Blackfox\\Getoptions\\": "src/"
+            "Blackfox\\GetOptions\\": "src/"
         }
     },
     "authors": [
