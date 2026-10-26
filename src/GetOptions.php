@@ -134,16 +134,16 @@ class GetOptions {
                 if(isset(self::$short_options[$pos+1]) && self::$short_options[$pos+1] == ':') {
                     if(isset($subject[1])) {
                         if($subject[1] == '=') {
-                            self::$options[$subject[0]] = substr($subject, 2);
+                            self::$options[][$subject[0]] = substr($subject, 2);
                         }
                         else {
-                            self::$options[$subject[0]] = substr($subject, 1);
+                            self::$options[][$subject[0]] = substr($subject, 1);
                         }
                     }
                     else {
                         if(($next = next($arguments)) !== false) {
                             if($next[0] != '-') {
-                                self::$options[$subject] = $next;
+                                self::$options[][$subject] = $next;
                             }
                             else {
                                 throw new \Exception("Valeur requise pour l'option -- $subject.");
@@ -157,7 +157,7 @@ class GetOptions {
                     $subject = "";
                 }
                 else {
-                    self::$options[$subject[0]] = false;
+                    self::$options[][$subject[0]] = false;
                 }
             }
             else {
@@ -198,12 +198,12 @@ class GetOptions {
 
             if(substr(self::$long_options[$pos], -1, 1) == ':') {
                 if(!empty($matches[2])) {
-                    self::$options[$subject] = $matches[2];
+                    self::$options[][$subject] = $matches[2];
                 }
                 else {
                     if(($next = next($arguments)) !== false) {
                         if($next[0] != '-') {
-                            self::$options[$subject] = $next;
+                            self::$options[][$subject] = $next;
                         }
                         else {
                             throw new Exception("Valeur requise pour l'option -- $subject.");
@@ -215,7 +215,7 @@ class GetOptions {
                 }
             }
             else {
-                self::$options[$subject] = false;
+                self::$options[][$subject] = false;
             }
         }
         else {
