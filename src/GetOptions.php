@@ -16,8 +16,8 @@ class GetOptions {
 
     public const SHORT_OPTIONS_VALIDATION_PATTERN = "/^([a-zA-Z0-9]{1}[:]?)+$/";
     public const LONG_OPTIONS_VALIDATION_PATTERN = "/^[a-zA-Z0-9]{2,}[:]?$/";
-    public const SHORT_OPTIONS_PATTERN = "/^-([a-zA-Z0-9]{1})[=]?([a-zA-Z0-9]*)$/";
-    public const LONG_OPTIONS_PATTERN = "/^--([a-zA-Z0-9]{2,})[=]?([.]*)$/";
+    public const SHORT_OPTIONS_PATTERN = "/^-([a-zA-Z0-9]{1})[=]?(.*)$/";
+    public const LONG_OPTIONS_PATTERN = "/^--([a-zA-Z0-9]{2,})[=]?(.*)$/";
 
 
     protected static string $short_options;
